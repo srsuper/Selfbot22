@@ -504,7 +504,7 @@ def siderMembers(to, mid):
 def welcomeMembers(to, mid):
     try:
         arrData = ""
-        textx = "สมาชิก ใหม่!!「{}」\nHaii  ".format(str(len(mid)))
+        textx = "สมาชิก ใหม่!!「{}」\nเขาชื่อว่า!!  ".format(str(len(mid)))
         arr = []
         no = 1
         num = 2
@@ -1708,7 +1708,7 @@ def bot(op):
                if msg.contentType == 7:
                  if wait["sticker"] == True:
                     msg.contentType = 0
-                    dhenzaSelfbot.sendMessage(msg.to,"Cek ID Sticker\n\nSTKID : " + msg.contentMetadata["STKID"] + "\nSTKPKGID : " + msg.contentMetadata["STKPKGID"] + "\nSTKVER : " + msg.contentMetadata["STKVER"]+ "\n\n「Link Sticker」" + "\nline://shop/detail/" + msg.contentMetadata["STKPKGID"])
+                    dhenzaSelfbot.sendMessage(msg.to,"Check ID Sticker\n\nSTKID : " + msg.contentMetadata["STKID"] + "\nSTKPKGID : " + msg.contentMetadata["STKPKGID"] + "\nSTKVER : " + msg.contentMetadata["STKVER"]+ "\n\n「Link Sticker」" + "\nline://shop/detail/" + msg.contentMetadata["STKPKGID"])
                if msg.contentType == 13:
                  if wait["contact"] == True:
                     msg.contentType = 0
@@ -1757,7 +1757,7 @@ def bot(op):
                         dhenzaSelfbot.findAndAddContactsByMid(target)
                         midd = (target)
                         Bots.append(midd)
-                        dhenzaSelfbot.sendMessage(msg.to, dhenzaSelfbot.getContact(target).displayName + " has been promoted Bot by " + dhenzaSelfbot.getContact(msg._from).displayName)
+                        dhenzaSelfbot.sendMessage(msg.to, dhenzaSelfbot.getContact(target).displayName + " 𝗛𝗮𝘀 𝗯𝗲𝗲𝗻 𝗽𝗿𝗼𝗺𝗼𝘁𝗲𝗱 𝗕𝗼𝘁 𝗯𝘆 " + dhenzaSelfbot.getContact(msg._from).displayName)
                         target = {}
                         wait["addbots"] = False
                  if wait["dellbots"] == True:
@@ -1765,7 +1765,7 @@ def bot(op):
                         target = msg.contentMetadata["mid"]
                         midd = (target)
                         Bots.remove(midd)
-                        dhenzaSelfbot.sendMessage(msg.to, dhenzaSelfbot.getContact(target).displayName + " has been Expel Bot by " + dhenzaSelfbot.getContact(msg._from).displayName)
+                        dhenzaSelfbot.sendMessage(msg.to, dhenzaSelfbot.getContact(target).displayName + " 𝗛𝗮𝘀 𝗯𝗲𝗲𝗻 𝗘𝘅𝗽𝗲𝗹 𝗕𝗼𝘁 𝗯𝘆 " + dhenzaSelfbot.getContact(msg._from).displayName)
                         target = {}
                         wait["dellbots"] = False
                     else:
@@ -1775,14 +1775,14 @@ def bot(op):
                  if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                   if wait["addstaff"] == True:
                     if msg.contentMetadata["mid"] in staff:
-                        dhenzaSelfbot.sendMessage(msg.to,"Already in stafflist")
+                        dhenzaSelfbot.sendMessage(msg.to,"𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐢𝐧 𝐬𝐭𝐚𝐟𝐟𝐥𝐢𝐬𝐭")
                         wait["addstaff"] = False
                     else:
                         target = msg.contentMetadata["mid"]
                         dhenzaSelfbot.findAndAddContactsByMid(target)
                         midd = (target)
                         staff.append(midd)
-                        dhenzaSelfbot.sendMessage(msg.to, dhenzaSelfbot.getContact(target).displayName + " has been promoted Staff by " + dhenzaSelfbot.getContact(msg._from).displayName)
+                        dhenzaSelfbot.sendMessage(msg.to, dhenzaSelfbot.getContact(target).displayName + " ได้รับ 𝙥𝙧𝙤𝙢𝙤𝙩𝙚𝙙 𝙎𝙩𝙖𝙛𝙛 𝙗𝙮 " + dhenzaSelfbot.getContact(msg._from).displayName)
                         target = {}
                         wait["addstaff"] = False
                  if wait["dellstaff"] == True:
@@ -1790,7 +1790,7 @@ def bot(op):
                         target = msg.contentMetadata["mid"]
                         midd = (target)
                         staff.remove(midd)
-                        dhenzaSelfbot.sendMessage(msg.to, dhenzaSelfbot.getContact(target).displayName + " has been Expel Staff by " + dhenzaSelfbot.getContact(msg._from).displayName)
+                        dhenzaSelfbot.sendMessage(msg.to, dhenzaSelfbot.getContact(target).displayName + " 𝗛𝗮𝘀 𝗯𝗲𝗲𝗻 𝗘𝘅𝗽𝗲𝗹 𝗦𝘁𝗮𝗳𝗳 𝗯𝘆 " + dhenzaSelfbot.getContact(msg._from).displayName)
                         target = {}
                         wait["dellstaff"] = False
                     else:
@@ -1800,14 +1800,14 @@ def bot(op):
                  if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                   if wait["addadmin"] == True:
                     if msg.contentMetadata["mid"] in admin:
-                        dhenzaSelfbot.sendMessage(msg.to,"Already in Admin")
+                        dhenzaSelfbot.sendMessage(msg.to,"𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐢𝐧 𝐀𝐝𝐦𝐢𝐧")
                         wait["addadmin"] = False
                     else:
                         target = msg.contentMetadata["mid"]
                         dhenzaSelfbot.findAndAddContactsByMid(target)
                         midd = (target)
                         admin.append(midd)
-                        dhenzaSelfbot.sendMessage(msg.to, dhenzaSelfbot.getContact(target).displayName + " has been promoted Admin by " + dhenzaSelfbot.getContact(msg._from).displayName)
+                        dhenzaSelfbot.sendMessage(msg.to, dhenzaSelfbot.getContact(target).displayName + " 𝗛𝗮𝘀 𝗯𝗲𝗲𝗻 𝗽𝗿𝗼𝗺𝗼𝘁𝗲𝗱 𝗔𝗱𝗺𝗶𝗻 𝗯𝘆 " + dhenzaSelfbot.getContact(msg._from).displayName)
                         target = {}
                         wait["addadmin"] = False
                  if wait["delladmin"] == True:
@@ -1815,7 +1815,7 @@ def bot(op):
                         target = msg.contentMetadata["mid"]
                         midd = (target)
                         admin.remove(midd)
-                        dhenzaSelfbot.sendMessage(msg.to, dhenzaSelfbot.getContact(target).displayName + " has been Expel Admin by " + dhenzaSelfbot.getContact(msg._from).displayName)
+                        dhenzaSelfbot.sendMessage(msg.to, dhenzaSelfbot.getContact(target).displayName + " 𝗛𝗮𝘀 𝗯𝗲𝗲𝗻 𝗘𝘅𝗽𝗲𝗹 𝗔𝗱𝗺𝗶𝗻 𝗯𝘆 " + dhenzaSelfbot.getContact(msg._from).displayName)
                         target = {}
                         wait["delladmin"] = False
                     else:
@@ -2093,12 +2093,12 @@ def bot(op):
                                 if msg.to in protectcancel: md+="│╠══[  ON  ] ᴘʀᴏᴛᴇᴄᴛᴄᴀɴᴄᴇʟ✔️\n"
                                 else: md+="│╠══[ OFF ] ᴘʀᴏᴛᴇᴄᴛᴄᴀɴᴄᴇʟ❌\n"
                                 md+= "│╚══[ ™ℙℕℂ𝕂@𝕊𝕂𝕋 ]"
-                                dhenzaSelfbot.sendMessage(msg.to, md+"\n│ᴛᴀɴɢɢᴀʟ : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n│ᴊᴀᴍ  "+ datetime.strftime(timeNow,'%H:%M:%S')+" ")
+                                dhenzaSelfbot.sendMessage(msg.to, md+"\n│วันที่ : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n│เวลา  "+ datetime.strftime(timeNow,'%H:%M:%S')+" ")
 
 
                         elif cmd == "creator" or text.lower() == 'creator':
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
-                                dhenzaSelfbot.sendMessage(msg.to,"Creator Kami")
+                                dhenzaSelfbot.sendMessage(msg.to,"Creator ผู้สร้าง")
                                 ma = ""
                                 for i in creator:
                                     ma = dhenzaSelfbot.getContact(i)
@@ -2227,14 +2227,14 @@ def bot(op):
                                 else:
                                     gPending = str(len(G.invitee))
                                 if G.preventedJoinByTicket == True:
-                                    gQr = "Tertutup"
-                                    gTicket = "Tidak ada"
+                                    gQr = "𝘾𝙡𝙤𝙨𝙚𝙙"
+                                    gTicket = "𝐓𝐡𝐞𝐫𝐞 𝐢𝐬 𝐧𝐨"
                                 else:
-                                    gQr = "Terbuka"
+                                    gQr = "𝙊𝙥𝙚𝙣"
                                     gTicket = "https://line.me/R/ti/g/{}".format(str(dhenzaSelfbot.reissueGroupTicket(G.id)))
                                 timeCreated = []
                                 timeCreated.append(time.strftime("%d-%m-%Y [ %H:%M:%S ]", time.localtime(int(G.createdTime) / 1000)))
-                                dhenzaSelfbot.sendMessage(msg.to, "𝔾𝕣𝕠𝕦𝕡 𝕀𝕟𝕗𝕠\n\nชื่อ กลุ่ม : {}".format(G.name)+ "\n𝕀𝔻 𝔾𝕣𝕠𝕦𝕡 : {}".format(G.id)+ "\nℂ𝕣𝕖𝕒𝕥𝕠𝕣 : {}".format(G.creator.displayName)+ "\n𝔻𝕒𝕥𝕖 ℂ𝕣𝕖𝕒𝕥𝕠𝕣 : {}".format(str(timeCreated))+ "\n𝕄𝕖𝕞𝕓𝕖𝕣𝕤 : {}".format(str(len(G.members)))+ "\nℙ𝕖𝕟𝕕𝕚𝕟𝕘 𝕄𝕖𝕞𝕓𝕖𝕣𝕤 : {}".format(gPending)+ "\n𝔾𝕣𝕠𝕦𝕡 ℚ𝕣 : {}".format(gQr)+ "\n𝔾𝕣𝕠𝕦𝕡 𝕋𝕚𝕔𝕜𝕖𝕥 : {}".format(gTicket))
+                                dhenzaSelfbot.sendMessage(msg.to, "【﻿Ｇｒｏｕｐ　Ｉｎｆｏ】\n\nชื่อ กลุ่ม : {}".format(G.name)+ "\n【﻿ＩＤ　Ｇｒｏｕｐ】 : {}".format(G.id)+ "\n【﻿Ｃｒｅａｔｏｒ】 : {}".format(G.creator.displayName)+ "\n【﻿Ｄａｔｅ　Ｃｒｅａｔｏｒ】 : {}".format(str(timeCreated))+ "\n【﻿Ｍｅｍｂｅｒ】 : {}".format(str(len(G.members)))+ "\n【﻿Ｐｅｎｄｉｎｇ　Ｍｅｍｂｅｒ】 : {}".format(gPending)+ "\n【﻿Ｇｒｏｕｐ　ＱＲ】 : {}".format(gQr)+ "\n【﻿Ｇｒｏｕｐ　Ｔｉｃｋｅｔ】 : {}".format(gTicket))
                                 dhenzaSelfbot.sendMessage(msg.to, None, contentMetadata={'mid': G.creator.mid}, contentType=13)
                                 dhenzaSelfbot.sendImageWithURL(msg.to, 'http://dl.profile.line-cdn.net/'+G.pictureStatus)
                             except Exception as e:
@@ -2533,9 +2533,9 @@ def bot(op):
                                 for i in gid:
                                     h = dhenzaSelfbot.getGroup(i).name
                                     if h == ng:
-                                        dhenzaSelfbot.sendMessage(i, " Silahkan invite Ownernya ")
+                                        dhenzaSelfbot.sendMessage(i, " 𝙋𝙡𝙚𝙖𝙨𝙚 𝙞𝙣𝙫𝙞𝙩𝙚 𝙩𝙝𝙚 𝙤𝙬𝙣𝙚𝙧 ")
                                         dhenzaSelfbot.leaveGroup(i)
-                                        dhenzaSelfbot.sendMessage(to,"Succes leave group " +h)
+                                        dhenzaSelfbot.sendMessage(to,"𝙎𝙪𝙘𝙘𝙚𝙨 𝙡𝙚𝙖𝙫𝙚 𝙜𝙧𝙤𝙪𝙥 " +h)
 
                         elif cmd == "timerespon":
                           if wait["selfbot"] == True:
@@ -2566,7 +2566,7 @@ def bot(op):
                                  timeNow = datetime.now(tz=tz)
                                  Setmain['SKreadPoint'][msg.to] = msg_id
                                  Setmain['SKreadMember'][msg.to] = {}
-                                 dhenzaSelfbot.sendMessage(msg.to, "Lurking berhasil diaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
+                                 dhenzaSelfbot.sendMessage(msg.to, "𝗟𝘂𝗿𝗸𝗶𝗻𝗴 𝘄𝗮𝘀 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗲𝗱\n\n𝘿𝙖𝙩𝙚 : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
 
                         elif cmd == "list off":
                           if wait["selfbot"] == True:
@@ -2575,7 +2575,7 @@ def bot(op):
                                  timeNow = datetime.now(tz=tz)
                                  del Setmain['SKreadPoint'][msg.to]
                                  del Setmain['SKreadMember'][msg.to]
-                                 dhenzaSelfbot.sendMessage(msg.to, "Lurking berhasil dinoaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
+                                 dhenzaSelfbot.sendMessage(msg.to, "𝗟𝘂𝗿𝗸𝗶𝗻𝗴 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗱𝗶𝘀𝗮𝗯𝗹𝗲𝗱\n\n𝘿𝙖𝙩𝙚 : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
 
                         elif cmd == "list sider":
                           if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
@@ -2624,9 +2624,9 @@ def bot(op):
                                     Setmain['SKreadPoint'][msg.to] = msg.id
                                     Setmain['SKreadMember'][msg.to] = {}
                                 else:
-                                    dhenzaSelfbot.sendMessage(msg.to, "User kosong tidak terdetect")
+                                    dhenzaSelfbot.sendMessage(msg.to, "𝗘𝗺𝗽𝘁𝘆 𝘂𝘀𝗲𝗿 𝗻𝗼𝘁 𝗱𝗲𝘁𝗲𝗰𝘁𝗲𝗱")
                             else:
-                                dhenzaSelfbot.sendMessage(msg.to, "Ketik List on dulu")
+                                dhenzaSelfbot.sendMessage(msg.to, "𝗧𝘆𝗽𝗲 𝗟𝗶𝘀𝘁 𝗼𝗻 𝗳𝗶𝗿𝘀𝘁")
 
                         elif cmd == "sider on":
                           if wait["selfbot"] == True:
@@ -2634,7 +2634,7 @@ def bot(op):
                               try:
                                   tz = pytz.timezone("Asia/Bangkok")
                                   timeNow = datetime.now(tz=tz)
-                                  dhenzaSelfbot.sendMessage(msg.to, "Cek sider diaktifkan\n\nDate "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nTime  "+ datetime.strftime(timeNow,'%H:%M:%S')+" ")
+                                  dhenzaSelfbot.sendMessage(msg.to, "𝗖𝗵𝗲𝗰𝗸 𝘀𝗶𝗱𝗲𝗿 𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗲𝗱\n\nDate "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nTime  "+ datetime.strftime(timeNow,'%H:%M:%S')+" ")
                                   del cctv['point'][msg.to]
                                   del cctv['sidermem'][msg.to]
                                   del cctv['cyduk'][msg.to]
@@ -2651,9 +2651,9 @@ def bot(op):
                                   tz = pytz.timezone("Asia/Bangkok")
                                   timeNow = datetime.now(tz=tz)
                                   cctv['cyduk'][msg.to]=False
-                                  dhenzaSelfbot.sendMessage(msg.to, "Cek sider dinonaktifkan\n\nDate "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nTime  "+ datetime.strftime(timeNow,'%H:%M:%S')+" ")
+                                  dhenzaSelfbot.sendMessage(msg.to, "𝗖𝗵𝗲𝗰𝗸 𝘀𝗶𝗱𝗲𝗿 𝗶𝘀 𝗱𝗶𝘀𝗮𝗯𝗹𝗲𝗱\n\nDate "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nTime  "+ datetime.strftime(timeNow,'%H:%M:%S')+" ")
                               else:
-                                  dhenzaSelfbot.sendMessage(msg.to, "Sudak tidak aktif")
+                                  dhenzaSelfbot.sendMessage(msg.to, "𝗦𝘂𝗱𝗮𝗸 𝗶𝘀 𝗶𝗻𝗮𝗰𝘁𝗶𝘃𝗲")
 
 #===========KAMUS============#
                         elif cmd.startswith("inggris:"):
