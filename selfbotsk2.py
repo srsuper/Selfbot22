@@ -1649,8 +1649,8 @@ def bot(op):
                                   zx = ""
                                   zxc = ""
                                   zx2 = []
-                                  xpesan =  " Sukses Invite \nNama "
-                                  ret_ = "Ketik Invite off jika sudah done"
+                                  xpesan =  " ꜱᴜᴄᴄᴇꜱꜱ ɪɴᴠɪᴛᴇ \nɴᴀᴍᴇ "
+                                  ret_ = "พิมพ์ ɪɴᴠɪᴛᴇ ᴏꜰꜰ เชิญเมื่อเสร็จสิ้น"
                                   ry = str(ryan.displayName)
                                   pesan = ''
                                   pesan2 = pesan+"@x\n"
@@ -2059,7 +2059,7 @@ def bot(op):
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 tz = pytz.timezone("Asia/Bangkok")
                                 timeNow = datetime.now(tz=tz)
-                                md = "│╔══[ TΣΔM βΩT PRΩTΣCTsᴋ ] \n"
+                                md = "│╔══[ ™ℙℕℂ𝕂@𝕊𝕂𝕋 ] \n"
                                 if wait["sticker"] == True: md+="│╠══[  ON  ] sᴛɪᴄᴋᴇʀ✔️\n"
                                 else: md+="│╠══[ OFF ] sᴛɪᴄᴋᴇʀ❌\n"
                                 if wait["contact"] == True: md+="│╠══[  ON  ] ᴄᴏɴᴛᴀᴄᴛ✔️\n"
@@ -2139,7 +2139,7 @@ def bot(op):
                                key = eval(msg.contentMetadata["MENTION"])
                                key1 = key["MENTIONEES"][0]["M"]
                                mi = dhenzaSelfbot.getContact(key1)
-                               dhenzaSelfbot.sendMessage(msg.to, "Nama : "+str(mi.displayName)+"\nMid : " +key1+"\nStatus Msg"+str(mi.statusMessage))
+                               dhenzaSelfbot.sendMessage(msg.to, "ɴᴀᴍᴇ : "+str(mi.displayName)+"\nᴍɪᴅ : " +key1+"\nꜱᴛᴀᴛᴜꜱ Msg"+str(mi.statusMessage))
                                dhenzaSelfbot.sendMessage(msg.to, None, contentMetadata={'mid': key1}, contentType=13)
                                if "videoProfile='{" in str(dhenzaSelfbot.getContact(key1)):
                                    dhenzaSelfbot.sendVideoWithURL(msg.to, 'http://dl.profile.line.naver.jp'+str(mi.picturePath)+'/vp.small')
@@ -2160,9 +2160,9 @@ def bot(op):
                               if ginvited != [] and ginvited != None:
                                   for gid in ginvited:
                                       dhenzaSelfbot.rejectGroupInvitation(gid)
-                                  dhenzaSelfbot.sendMessage(to, "Succes reject {} ".format(str(len(ginvited))))
+                                  dhenzaSelfbot.sendMessage(to, "ꜱᴜᴄᴄᴇꜱꜱ ʀᴇᴊᴇᴄᴛ {} ".format(str(len(ginvited))))
                               else:
-                                  dhenzaSelfbot.sendMessage(to, "Nothing")
+                                  dhenzaSelfbot.sendMessage(to, "ɴᴏᴛʜɪɴɢ")
 
                         elif text.lower() == "rchat":
                           if wait["selfbot"] == True:
@@ -2307,7 +2307,7 @@ def bot(op):
                                 ginfo = dhenzaSelfbot.getGroup(i)
                                 if ginfo == group:
                                     dhenzaSelfbot.leaveGroup(i)
-                                    dhenzaSelfbot.sendMessage(msg.to,"Leave in groups " +str(ginfo.name))
+                                    dhenzaSelfbot.sendMessage(msg.to,"ʟᴇᴀᴠᴇ ɪɴ ɢʀᴏᴜᴘꜱ " +str(ginfo.name))
 
                         elif cmd == "flist":
                           if wait["selfbot"] == True:
@@ -2334,7 +2334,7 @@ def bot(op):
                                    a = a + 1
                                    end = "\n"
                                    ma += "" + str(a) + ". " +G.name+ "\n"
-                               dhenzaSelfbot.sendMessage(msg.to,"● 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗦𝗧\n\n"+ma+"\nTotal"+str(len(gid))+" Groups")
+                               dhenzaSelfbot.sendMessage(msg.to,"● 𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗦𝗧\n\n"+ma+"\nTotal"+str(len(gid))+" 𝗚𝗥𝗢𝗨𝗣")
 
                         elif cmd == "curl":
                           if wait["selfbot"] == True:
@@ -2343,7 +2343,7 @@ def bot(op):
                                    X = dhenzaSelfbot.getGroup(msg.to)
                                    X.preventedJoinByTicket = True
                                    dhenzaSelfbot.updateGroup(X)
-                                   dhenzaSelfbot.sendMessage(msg.to, "Url closed")
+                                   dhenzaSelfbot.sendMessage(msg.to, "ᴜʀʟ ᴄʟᴏꜱᴇᴅ")
 
                         elif cmd == "ourl":
                           if wait["selfbot"] == True:
@@ -2354,7 +2354,7 @@ def bot(op):
                                       x.preventedJoinByTicket = False
                                       dhenzaSelfbot.updateGroup(x)
                                    gurl = dhenzaSelfbot.reissueGroupTicket(msg.to)
-                                   dhenzaSelfbot.sendMessage(msg.to, "Nama : "+str(x.name)+ "\nUrl grup : http://line.me/R/ti/g/"+gurl)
+                                   dhenzaSelfbot.sendMessage(msg.to, "ɴᴀᴍᴇ : "+str(x.name)+ "\nᴜʀʟ ɢʀᴏᴜᴘ : http://line.me/R/ti/g/"+gurl)
 
 #===========BOT UPDATE============#
                         elif cmd.startswith("tarik "):
@@ -3212,7 +3212,7 @@ def bot(op):
                                        welcome.append(msg.to)
                                        ginfo = dhenzaSelfbot.getGroup(msg.to)
                                        msgs = ""
-                                  dhenzaSelfbot.sendMessage(msg.to, "Welcome Has Been Active")
+                                  dhenzaSelfbot.sendMessage(msg.to, "ᴡᴇʟᴄᴏᴍᴇ ʜᴀꜱ ʙᴇᴇɴ ᴀᴄᴛɪᴠᴇ")
                               elif spl == 'off':
                                     if msg.to in welcome:
                                          welcome.remove(msg.to)
@@ -3221,7 +3221,7 @@ def bot(op):
                                     else:
                                          ginfo = dhenzaSelfbot.getGroup(msg.to)
                                          msgs = ""
-                                    dhenzaSelfbot.sendMessage(msg.to, "Welcome has been Deactive")
+                                    dhenzaSelfbot.sendMessage(msg.to, "ᴡᴇʟᴄᴏᴍᴇ ʜᴀꜱ ʙᴇᴇɴ ᴅᴇᴀᴄᴛɪᴠᴇ")
 
                         elif 'Protecturl ' in msg.text:
                            if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
@@ -3232,16 +3232,16 @@ def bot(op):
                                   else:
                                        protectqr.append(msg.to)
                                        ginfo = dhenzaSelfbot.getGroup(msg.to)
-                                       msgs = "Status : [ ✔ ]\nDi Group : " +str(ginfo.name)
-                                  dhenzaSelfbot.sendMessage(msg.to, "「 Status Protect Url 」\n" + msgs)
+                                       msgs = "Status : [ ✔ ]\nᴅɪ ɢʀᴏᴜᴘ : " +str(ginfo.name)
+                                  dhenzaSelfbot.sendMessage(msg.to, "「 ꜱᴛᴀᴛᴜꜱ ᴘʀᴏᴛᴇᴄᴛ ᴜʀʟ 」\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in protectqr:
                                          protectqr.remove(msg.to)
                                          ginfo = dhenzaSelfbot.getGroup(msg.to)
-                                         msgs = "Status : [ ❌ ]\nDi Group : " +str(ginfo.name)
+                                         msgs = "Status : [ ❌ ]\nᴅɪ ɢʀᴏᴜᴘ : " +str(ginfo.name)
                                     else:
                                          msgs = "ᴘʀᴏᴛᴇᴄᴛ ᴜʀʟ ɪꜱ ɴᴏ ʟᴏɴɢᴇʀ ᴀᴄᴛɪᴠᴇ"
-                                    dhenzaSelfbot.sendMessage(msg.to, "「 Status Protect Url 」\n" + msgs)
+                                    dhenzaSelfbot.sendMessage(msg.to, "「 ꜱᴛᴀᴛᴜꜱ ᴘʀᴏᴛᴇᴄᴛ ᴜʀʟ 」\n" + msgs)
 
                         elif 'Protectkick ' in msg.text:
                            if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
@@ -3252,16 +3252,16 @@ def bot(op):
                                   else:
                                        protectkick.append(msg.to)
                                        ginfo = dhenzaSelfbot.getGroup(msg.to)
-                                       msgs = "Status : [ ✔ ]\nDi Group : " +str(ginfo.name)
-                                  dhenzaSelfbot.sendMessage(msg.to, "「 Status Protect kick 」\n" + msgs)
+                                       msgs = "Status : [ ✔ ]\nᴅɪ ɢʀᴏᴜᴘ : " +str(ginfo.name)
+                                  dhenzaSelfbot.sendMessage(msg.to, "「 ꜱᴛᴀᴛᴜꜱ ᴘʀᴏᴛᴇᴄᴛ ᴋɪᴄᴋ 」\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in protectkick:
                                          protectkick.remove(msg.to)
                                          ginfo = dhenzaSelfbot.getGroup(msg.to)
-                                         msgs = "Status : [ ❌ ]\nDi Group : " +str(ginfo.name)
+                                         msgs = "Status : [ ❌ ]\nᴅɪ ɢʀᴏᴜᴘ : " +str(ginfo.name)
                                     else:
                                          msgs = "ᴘʀᴏᴛᴇᴄᴛ ᴋɪᴄᴋ ɪꜱ ɴᴏ ʟᴏɴɢᴇʀ ᴀᴄᴛɪᴠᴇ"
-                                    dhenzaSelfbot.sendMessage(msg.to, "「 Status Protect kick 」\n" + msgs)
+                                    dhenzaSelfbot.sendMessage(msg.to, "「 ꜱᴛᴀᴛᴜꜱ ᴘʀᴏᴛᴇᴄᴛ ᴋɪᴄᴋ 」\n" + msgs)
 
                         elif 'Protectjoin ' in msg.text:
                            if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
@@ -3272,16 +3272,16 @@ def bot(op):
                                   else:
                                        protectjoin.append(msg.to)
                                        ginfo = dhenzaSelfbot.getGroup(msg.to)
-                                       msgs = "Status : [ ✔ ]\nDi Group : " +str(ginfo.name)
-                                  dhenzaSelfbot.sendMessage(msg.to, "「 Status Protect Join 」\n" + msgs)
+                                       msgs = "Status : [ ✔ ]\nᴅɪ ɢʀᴏᴜᴘ : " +str(ginfo.name)
+                                  dhenzaSelfbot.sendMessage(msg.to, "「 ꜱᴛᴀᴛᴜꜱ ᴘʀᴏᴛᴇᴄᴛ ᴊᴏɪɴ 」\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in protectjoin:
                                          protectjoin.remove(msg.to)
                                          ginfo = dhenzaSelfbot.getGroup(msg.to)
-                                         msgs = "Status : [ ❌ ]\nDi Group : " +str(ginfo.name)
+                                         msgs = "Status : [ ❌ ]\nᴅɪ ɢʀᴏᴜᴘ : " +str(ginfo.name)
                                     else:
                                          msgs = "ᴘʀᴏᴛᴇᴄᴛ ᴊᴏɪɴ ɪꜱ ɴᴏ ʟᴏɴɢᴇʀ ᴀᴄᴛɪᴠᴇ"
-                                    dhenzaSelfbot.sendMessage(msg.to, "「 Status Protect Join 」\n" + msgs)
+                                    dhenzaSelfbot.sendMessage(msg.to, "「 ꜱᴛᴀᴛᴜꜱ ᴘʀᴏᴛᴇᴄᴛ ᴊᴏɪɴ 」\n" + msgs)
 
                         elif 'Protectcancel ' in msg.text:
                            if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
@@ -3292,16 +3292,16 @@ def bot(op):
                                   else:
                                        protectcancel.append(msg.to)
                                        ginfo = dhenzaSelfbot.getGroup(msg.to)
-                                       msgs = "Status : [ ✔ ]\nDi Group : " +str(ginfo.name)
-                                  dhenzaSelfbot.sendMessage(msg.to, "「 Status Protect Cancel 」\n" + msgs)
+                                       msgs = "Status : [ ✔ ]\nᴅɪ ɢʀᴏᴜᴘ : " +str(ginfo.name)
+                                  dhenzaSelfbot.sendMessage(msg.to, "「 ꜱᴛᴀᴛᴜꜱ ᴘʀᴏᴛᴇᴄᴛ ᴄᴀɴᴄᴇʟ 」\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in protectcancel:
                                          protectcancel.remove(msg.to)
                                          ginfo = dhenzaSelfbot.getGroup(msg.to)
-                                         msgs = "Status : [ ❌ ]\nDi Group : " +str(ginfo.name)
+                                         msgs = "Status : [ ❌ ]\nᴅɪ ɢʀᴏᴜᴘ : " +str(ginfo.name)
                                     else:
                                          msgs = "ᴘʀᴏᴛᴇᴄᴛ ᴄᴀɴᴄᴇʟ ɪꜱ ɴᴏ ʟᴏɴɢᴇʀ ᴀᴄᴛɪᴠᴇ"
-                                    dhenzaSelfbot.sendMessage(msg.to, "「 Status Protect Cancel 」\n" + msgs)
+                                    dhenzaSelfbot.sendMessage(msg.to, "「 ꜱᴛᴀᴛᴜꜱ ᴘʀᴏᴛᴇᴄᴛ ᴄᴀɴᴄᴇʟ 」\n" + msgs)
 
                         elif 'Protectinvite ' in msg.text:
                            if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
@@ -3312,16 +3312,16 @@ def bot(op):
                                   else:
                                        protectinvite.append(msg.to)
                                        ginfo = dhenzaSelfbot.getGroup(msg.to)
-                                       msgs = "Status : [ ✔ ]\nDi Group : " +str(ginfo.name)
-                                  dhenzaSelfbot.sendMessage(msg.to, "「 Status Protect Invite 」\n" + msgs)
+                                       msgs = "Status : [ ✔ ]\nᴅɪ ɢʀᴏᴜᴘ : " +str(ginfo.name)
+                                  dhenzaSelfbot.sendMessage(msg.to, "「 ꜱᴛᴀᴛᴜꜱ ᴘʀᴏᴛᴇᴄᴛ ɪɴᴠɪᴛᴇ 」\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in protectinvite:
                                          protectinvite.remove(msg.to)
                                          ginfo = dhenzaSelfbot.getGroup(msg.to)
-                                         msgs = "Status : [ ❌ ]\nDi Group : " +str(ginfo.name)
+                                         msgs = "Status : [ ❌ ]\nᴅɪ ɢʀᴏᴜᴘ : " +str(ginfo.name)
                                     else:
                                          msgs = "ᴘʀᴏᴛᴇᴄᴛ ɪɴᴠɪᴛᴇ ɪꜱ ɴᴏ ʟᴏɴɢᴇʀ ᴀᴄᴛɪᴠᴇ"
-                                    dhenzaSelfbot.sendMessage(msg.to, "「 Status Protect Invite 」\n" + msgs)
+                                    dhenzaSelfbot.sendMessage(msg.to, "「 ꜱᴛᴀᴛᴜꜱ ᴘʀᴏᴛᴇᴄᴛ ɪɴᴠɪᴛᴇ 」\n" + msgs)
 
                         elif 'Js ' in msg.text:
                            if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
@@ -3332,16 +3332,16 @@ def bot(op):
                                   else:
                                        protectantijs.append(msg.to)
                                        ginfo = dhenzaSelfbot.getGroup(msg.to)
-                                       msgs = "Status : [ ✔ ]\nDi Group : " +str(ginfo.name)
-                                  dhenzaSelfbot.sendMessage(msg.to, "「 Status Protect Anti Kicker 」\n" + msgs)
+                                       msgs = "Status : [ ✔ ]\nᴅɪ ɢʀᴏᴜᴘ : " +str(ginfo.name)
+                                  dhenzaSelfbot.sendMessage(msg.to, "「 ꜱᴛᴀᴛᴜꜱ ᴘʀᴏᴛᴇᴄᴛ ᴀɴᴛɪ ᴋɪᴄᴋᴇʀ 」\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in protectantijs:
                                          protectantijs.remove(msg.to)
                                          ginfo = dhenzaSelfbot.getGroup(msg.to)
-                                         msgs = "Status : [ ❌ ]\nDi Group : " +str(ginfo.name)
+                                         msgs = "Status : [ ❌ ]\nᴅɪ ɢʀᴏᴜᴘ : " +str(ginfo.name)
                                     else:
                                          msgs = "ᴘʀᴏᴛᴇᴄᴛ ᴀɴᴛɪ ᴋɪᴄᴋᴇʀ ɪꜱ ɴᴏ ʟᴏɴɢᴇʀ ᴀᴄᴛɪᴠᴇ"
-                                    dhenzaSelfbot.sendMessage(msg.to, "「 Status Protect Antikicker 」\n" + msgs)
+                                    dhenzaSelfbot.sendMessage(msg.to, "「 ꜱᴛᴀᴛᴜꜱ ᴘʀᴏᴛᴇᴄᴛ ᴀɴᴛɪ ᴋɪᴄᴋᴇʀ 」\n" + msgs)
 
                         elif 'Allpro ' in msg.text:
                            if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
@@ -3369,14 +3369,14 @@ def bot(op):
                                       protectantijs.append(msg.to)
                                   if msg.to in protectcancel:
                                       ginfo = dhenzaSelfbot.getGroup(msg.to)
-                                      msgs = "Status : [ ✔ ]\nDi Group : " +str(ginfo.name)
+                                      msgs = "Status : [ ✔ ]\nᴅɪ ɢʀᴏᴜᴘ : " +str(ginfo.name)
                                       msgs += "\nᴀʟʟ ᴘʀᴏᴛᴇᴄᴛᴛɪᴏɴꜱ ᴀʀᴇ ᴇɴᴀʙʟᴇᴅ"
                                   else:
                                       protectcancel.append(msg.to)
                                       ginfo = dhenzaSelfbot.getGroup(msg.to)
-                                      msgs = "Status : [ ✔ ]\nDi Group : " +str(ginfo.name)
+                                      msgs = "Status : [ ✔ ]\nᴅɪ ɢʀᴏᴜᴘ : " +str(ginfo.name)
                                       msgs += "\nᴀʟʟ ᴘʀᴏᴛᴇᴄᴛɪᴏɴꜱ ᴀʀᴇ ᴇɴᴀʙʟᴇᴅ"
-                                  dhenzaSelfbot.sendMessage(msg.to, "「 Status Protection 」\n" + msgs)
+                                  dhenzaSelfbot.sendMessage(msg.to, "「 ꜱᴛᴀᴛᴜꜱ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ 」\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in protectqr:
                                          protectqr.remove(msg.to)
@@ -3401,11 +3401,11 @@ def bot(op):
                                     if msg.to in protectcancel:
                                          protectcancel.remove(msg.to)
                                          ginfo = dhenzaSelfbot.getGroup(msg.to)
-                                         msgs = "Status : [ ❌ ]\nDi Group : " +str(ginfo.name)
+                                         msgs = "Status : [ ❌ ]\nᴅɪ ɢʀᴏᴜᴘ : " +str(ginfo.name)
                                          msgs += "\nᴀʟʟ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ʜᴀꜱ ʙᴇᴇɴ ᴛᴜʀɴᴇᴅ ᴏꜰꜰ"
                                     else:
                                          ginfo = dhenzaSelfbot.getGroup(msg.to)
-                                         msgs = "Status : [ ❌ ]\nDi Group : " +str(ginfo.name)
+                                         msgs = "Status : [ ❌ ]\nᴅɪ ɢʀᴏᴜᴘ : " +str(ginfo.name)
                                          msgs += "\nᴀʟʟ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ɪꜱ ᴛᴜʀɴᴇᴅ ᴏꜰꜰ"
                                     dhenzaSelfbot.sendMessage(msg.to, "「 Status Protection 」\n" + msgs)
 
@@ -3526,32 +3526,32 @@ def bot(op):
                         elif cmd == "admin on" or text.lower() == 'admin:on':
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["addadmin"] = True
-                                dhenzaSelfbot.sendMessage(msg.to,"Send Contact")
+                                dhenzaSelfbot.sendMessage(msg.to,"ꜱᴇɴᴅ ᴄᴏɴᴛᴀᴄᴛ")
 
                         elif cmd == "admin off" or text.lower() == 'adminexpl:on':
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["delladmin"] = True
-                                dhenzaSelfbot.sendMessage(msg.to,"Send contact")
+                                dhenzaSelfbot.sendMessage(msg.to,"ꜱᴇɴᴅ ᴄᴏɴᴛᴀᴄᴛ")
 
                         elif cmd == "staff on" or text.lower() == 'staff:on':
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["addstaff"] = True
-                                dhenzaSelfbot.sendMessage(msg.to,"Send contact")
+                                dhenzaSelfbot.sendMessage(msg.to,"ꜱᴇɴᴅ ᴄᴏɴᴛᴀᴄᴛ")
 
                         elif cmd == "staff off" or text.lower() == 'staffexpl:on':
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["dellstaff"] = True
-                                dhenzaSelfbot.sendMessage(msg.to,"Send contact")
+                                dhenzaSelfbot.sendMessage(msg.to,"ꜱᴇɴᴅ ᴄᴏɴᴛᴀᴄᴛ")
 
                         elif cmd == "bot on" or text.lower() == 'bot:on':
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["addbots"] = True
-                                dhenzaSelfbot.sendMessage(msg.to,"Send contact")
+                                dhenzaSelfbot.sendMessage(msg.to,"ꜱᴇɴᴅ ᴄᴏɴᴛᴀᴄᴛ")
 
                         elif cmd == "bot off" or text.lower() == 'botexpl:on':
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["dellbots"] = True
-                                dhenzaSelfbot.sendMessage(msg.to,"Kirim kontaknya...")
+                                dhenzaSelfbot.sendMessage(msg.to,"ꜱᴇɴᴅ ᴛʜᴇ ᴄᴏɴᴛᴀᴄᴛ ...")
 
                         elif cmd == "abort" or text.lower() == 'refresh':
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
@@ -3593,109 +3593,109 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["Timeline"] = True
-                                dhenzaSelfbot.sendMessage(msg.to,"detect timeline on")
+                                dhenzaSelfbot.sendMessage(msg.to,"ᴅᴇᴛᴇᴄᴛ ᴛɪᴍᴇʟɪɴᴇ ᴏɴ")
 
                         elif cmd == "timeline off" or text.lower() == 'timeline off':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["Timeline"] = False
-                                dhenzaSelfbot.sendMessage(msg.to,"detect timleline off ")
+                                dhenzaSelfbot.sendMessage(msg.to,"ᴅᴇᴛᴇᴄᴛ ᴛɪᴍʟᴇʟɪɴᴇ ᴏꜰꜰ ")
 
                         elif cmd == "autoblock on" or text.lower() == 'blockadd on':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["autoblock"] = True
-                                dhenzaSelfbot.sendMessage(msg.to,"autoblock berhasil di hidupkan")
+                                dhenzaSelfbot.sendMessage(msg.to,"ᴀᴜᴛᴏʙʟᴏᴄᴋ ʜᴀꜱ ʙᴇᴇɴ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴛᴜʀɴᴇᴅ ᴏɴ")
 
                         elif cmd == "autoblock off" or text.lower() == 'blockadd off':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["autoblock"] = False
-                                dhenzaSelfbot.sendMessage(msg.to,"autoblock berhasil di matikan")
+                                dhenzaSelfbot.sendMessage(msg.to,"ᴀᴜᴛᴏʙʟᴏᴄᴋ ʜᴀꜱ ʙᴇᴇɴ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴅɪꜱᴀʙʟᴇᴅ")
 
                         elif cmd == "unsend on" or text.lower() == 'unsend on':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 settings["unsendMessage"] = True
-                                dhenzaSelfbot.sendMessage(msg.to,"detect unsend diaktifkan")
+                                dhenzaSelfbot.sendMessage(msg.to,"ᴅᴇᴛᴇᴄᴛ ᴜɴꜱᴇɴᴅ ᴇɴᴀʙʟᴇᴅ")
 
                         elif cmd == "unsend off" or text.lower() == 'unsend off':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 settings["unsendMessage"] = False
-                                dhenzaSelfbot.sendMessage(msg.to,"detect unsend dinonaktifkan")
+                                dhenzaSelfbot.sendMessage(msg.to,"ᴅᴇᴛᴇᴄᴛ ᴜɴꜱᴇɴᴅ ɪꜱ ᴅɪꜱᴀʙʟᴇᴅ")
 
                         elif cmd == "contact on" or text.lower() == 'contact on':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["contact"] = True
-                                dhenzaSelfbot.sendMessage(msg.to,"Deteksi contact diaktifkan")
+                                dhenzaSelfbot.sendMessage(msg.to,"ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴛᴇᴄᴛɪᴏɴ ɪꜱ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
 
                         elif cmd == "contact off" or text.lower() == 'contact off':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["contact"] = False
-                                dhenzaSelfbot.sendMessage(msg.to,"Deteksi contact dinonaktifkan")
+                                dhenzaSelfbot.sendMessage(msg.to,"ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴛᴇᴄᴛɪᴏɴ ɪꜱ ᴅɪꜱᴀʙʟᴇᴅ")
 
                         elif cmd == "respon on" or text.lower() == 'respon on':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["detectMention"] = True
-                                dhenzaSelfbot.sendMessage(msg.to,"Auto respon diaktifkan")
+                                dhenzaSelfbot.sendMessage(msg.to,"ᴀᴜᴛᴏ ʀᴇꜱᴘᴏɴꜱᴇ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
 
                         elif cmd == "respon off" or text.lower() == 'respon off':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["detectMention"] = False
-                                dhenzaSelfbot.sendMessage(msg.to,"Auto respon dinonaktifkan")
+                                dhenzaSelfbot.sendMessage(msg.to,"ᴀᴜᴛᴏ ʀᴇꜱᴘᴏɴꜱᴇ ɪꜱ ᴅɪꜱᴀʙʟᴇᴅ")
 
                         elif cmd == "autojoin on" or text.lower() == 'autojoin on':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["autoJoin"] = True
-                                dhenzaSelfbot.sendMessage(msg.to,"Autojoin diaktifkan")
+                                dhenzaSelfbot.sendMessage(msg.to,"ᴀᴜᴛᴏᴊᴏɪɴ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
 
                         elif cmd == "autojoin off" or text.lower() == 'autojoin off':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["autoJoin"] = False
-                                dhenzaSelfbot.sendMessage(msg.to,"Autojoin dinonaktifkan")
+                                dhenzaSelfbot.sendMessage(msg.to,"ᴀᴜᴛᴏᴊᴏɪɴ ɪꜱ ᴅɪꜱᴀʙʟᴇᴅ")
 
                         elif cmd == "autoadd on" or text.lower() == 'autoadd on':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["autoAdd"] = True
-                                dhenzaSelfbot.sendMessage(msg.to,"Auto add diaktifkan")
+                                dhenzaSelfbot.sendMessage(msg.to,"ᴀᴜᴛᴏ ᴀᴅᴅ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
 
                         elif cmd == "autoadd off" or text.lower() == 'autoadd off':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["autoAdd"] = False
-                                dhenzaSelfbot.sendMessage(msg.to,"Auto add dinonaktifkan")
+                                dhenzaSelfbot.sendMessage(msg.to,"ᴀᴜᴛᴏ ᴀᴅᴅ ɪꜱ ᴅɪꜱᴀʙʟᴇᴅ")
 
                         elif cmd == "sticker on" or text.lower() == 'sticker on':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["sticker"] = True
-                                dhenzaSelfbot.sendMessage(msg.to,"Deteksi sticker diaktifkan")
+                                dhenzaSelfbot.sendMessage(msg.to,"ꜱᴛɪᴄᴋᴇʀ ᴅᴇᴛᴇᴄᴛɪᴏɴ ɪꜱ ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
 
                         elif cmd == "sticker off" or text.lower() == 'sticker off':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 wait["sticker"] = False
-                                dhenzaSelfbot.sendMessage(msg.to,"Deteksi sticker dinonaktifkan")
+                                dhenzaSelfbot.sendMessage(msg.to,"ꜱᴛɪᴄᴋᴇʀ ᴅᴇᴛᴇᴄᴛɪᴏɴ ɪꜱ ᴅɪꜱᴀʙʟᴇᴅ")
 
                         elif cmd == "jointicket on" or text.lower() == 'jointicket on':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 settings["autoJoinTicket"] = True
-                                dhenzaSelfbot.sendMessage(msg.to,"Join ticket diaktifkan")
+                                dhenzaSelfbot.sendMessage(msg.to,"ᴊᴏɪɴ ᴛɪᴄᴋᴇᴛ ᴇɴᴀʙʟᴇᴅ")
 
                         elif cmd == "jointicket off" or text.lower() == 'jointicket off':
                           if wait["selfbot"] == True:
                             if msg._from in owner or msg._from in admin or msg._from in staff or msg._from in mid:
                                 settings["autoJoinTicket"] = False
-                                dhenzaSelfbot.sendMessage(msg.to,"Join ticket dinonaktifkan")
+                                dhenzaSelfbot.sendMessage(msg.to,"ᴊᴏɪɴ ᴛɪᴄᴋᴇᴛ ɪꜱ ᴅɪꜱᴀʙʟᴇᴅ")
 
 #===========COMMAND BLACKLIST============#
                         elif ("Talkban:on " in msg.text):
